@@ -1,10 +1,9 @@
 <!--
   Greetings!
 
-  This delightful template has been meticulously crafted and brought to life by Syed Mohsin. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
 -->
 
-<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
+<!-- For any inquiries or collaborations reach out to me at oraelosikenny@gmail.com -->
 
 <!--
   Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
@@ -23,29 +22,29 @@
 
     <meta
       name="description"
-      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+      content="Welcome to my portfolio. I am an AI product manager with multi-disciplinary experience building innovative solutions across AI, finance, and product strategy. Background in geology with specialized training in product management. Developing AI-powered tools and financial models while leading product strategy in fintech and edutech sectors where i focus on first principles thinking and 10x improvement methodologies. Open to strategic collaborations and consulting opportunities."
     />
 
     <!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="Syed Mohsin's Portfolio">
-<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+<meta itemprop="name" content="Kenechukwu Oraelosi's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio. I am an AI product manager with multi-disciplinary experience building innovative solutions across AI, finance, and product strategy. Background in geology with specialized training in product management. Developing AI-powered tools and financial models while leading product strategy in fintech and edutech sectors where i focus on first principles thinking and 10x improvement methodologies. Open to strategic collaborations and consulting opportunities.">
 
 <!-- Reference screenshot of updated site's header in place of content -->
 <meta itemprop="image" content="assets/images/sharing-card.png">
 
-<!-- Facebook Meta Tags -->
+<!-- Facebook Meta Tags: ensure to change url to your hosted site -->
 <meta property="og:url" content="https://ossportfolio.netlify.app">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Syed Mohsin's Portfolio">
-<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+<meta property="og:title" content="Kenechukwu Oraelosi's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio. I am an AI product manager with multi-disciplinary experience building innovative solutions across AI, finance, and product strategy. Background in geology with specialized training in product management. Developing AI-powered tools and financial models while leading product strategy in fintech and edutech sectors where i focus on first principles thinking and 10x improvement methodologies. Open to strategic collaborations and consulting opportunities.">
 
 <!-- Reference screenshot of updated site's header in content -->
 <meta property="og:image" content="assets/images/sharing-card.png">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Syed Mohsin's Portfolio">
-<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+<meta name="twitter:title" content="Kenechukwu Oraelosi's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio. I am an AI product manager with multi-disciplinary experience building innovative solutions across AI, finance, and product strategy. Background in geology with specialized training in product management. Developing AI-powered tools and financial models while leading product strategy in fintech and edutech sectors where i focus on first principles thinking and 10x improvement methodologies. Open to strategic collaborations and consulting opportunities.">
 
 <!-- Reference screenshot of updated site's header in content -->
 <meta name="twitter:image" content="assets/images/sharing-card.png">
@@ -72,7 +71,7 @@
     <script src="script.js" defer></script>
 
     <!-- Your name here -->
-    <title>Syed Mohsin's Portfolio</title>
+    <title>Kenechukwu Oraelosi's portfolio</title>
   </head>
 
   <body>
@@ -95,7 +94,7 @@
           <li class="nav-item"><a href="#">Home</a></li>
           <li class="nav-item"><a href="#work">My Work</a></li>
           <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item"><a href="#roles">My Skills</a></li>
           <li class="nav-item">
             <a href="#contact" data-focused="last-focused">Contact</a>
           </li>
@@ -106,25 +105,29 @@
         <div class="header-textbox">
           <!-- Replace with your name and job title -->
           <h1 class="h1">
-            <span>Hi, I'm Syed Mohsin</span>
-            <span>Frontend Web Developer</span>
+            <span>Hi, I'm Kenechukwu Oraelosi</span>
+            <span>AI Product Manager</span>
           </h1>
 
           <!-- Add a small introductory paragraph about yourself -->
           <p class="header-text">
-            A frontend software engineer and interface designer who builds UX
-            rich accessible and performant websites.
+            AI Product Manager building innovative solutions at the intersection of AI, technology, finance, and strategic product development.
           </p>
 
           <div class="header-btns">
             <a href="#contact" class="btn btn-cta">Hire me</a>
             <a href="#work" class="btn btn-secondary">See my work</a>
+			<!-- Start remove resume button -->
+            <a href="https://drive.google.com/file/d/1wkfDxQndP7OIAuisakW4okcIZ7VRo3YI/view?usp=sharing" class="btn btn-secondary" download>Download Resume</a>
+			<!-- End remove resume button -->
           </div>
         </div>
       </div>
     </header>
 
     <main>
+	<!-- use the script type="text/plain tag to disable this client section. delete otherwise -->
+	<script type="text/plain" id="disabled-section">
       <section class="client">
         <div class="container">
           <h2 class="h2">Trusted by</h2>
@@ -214,151 +217,696 @@
           </div>
         </div>
       </section>
+	</script>
 
-      <section class="work">
+<section class="work">
         <div class="container">
           <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-tabs">
+            <button class="work-tab-btn active" data-tab="ai">AI</button>
+			<!-- Start remove resume button -->
+            <button class="work-tab-btn" data-tab="pm">Product Management</button>
+			<!-- End remove resume button -->
+			<!-- Start remove resume button -->
+            <button class="work-tab-btn" data-tab="indie">Indie Projects</button>
+			<!-- End remove resume button -->
+			<!-- Start remove resume button -->
+            <button class="work-tab-btn" data-tab="other">Other Projects</button>
+			<!-- End remove resume button -->
+          </div>
+
           <div class="work-boxes">
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">portfolio template</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  A free to use, minimal and accessible portfolio template for
-                  developers.
-                </p>
-                <!-- Add technologies you used to build the project -->
-                <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>SCSS</li>
-                  <li>MDX</li>
-                </ol>
+		    <!-- WORK TAB START: AI (ai) -->
+            <div class="work-tab-content active" id="ai">
+			  <!-- WORK BOX START: 1 DONE -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">LLM Inference</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">Image classification using Internvl3.</p>
+				  <!-- Add libraries/languages used  -->
+				  <!-- Start remove resume button -->
+                  <ol class="work-technologies">
+                    <li>Python</li>
+                    <li>VLM: Internvl3</li>
+                    <li>Google Colab</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://colab.research.google.com/drive/103oLQAwku_qDYeRxllbQqKKf9PG_YQJw?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Explore this project</a
+                    >
 
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://github.com/devsyedmohsin" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="https://github.com/devsyedmohsin"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
+                       <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup  -->
+                    <a
+                      href="https://colab.research.google.com/drive/103oLQAwku_qDYeRxllbQqKKf9PG_YQJw?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+						src="assets/images/social-links/icons8-google-colab-96.svg"
+                        alt="Colab"
+                        loading="lazy"
+                      />
+                    </a>
+					<!-- end commenting  -->
+                  </div>
                 </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/LLM-Inference.webp"
+                    alt="LLM inference"
+                  />
+                </picture>
               </div>
-
-         <!-- Update img src and alt attribute  -->
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/portfolio-template.webp"
-                  alt="agency elevation"
-                />
-              </picture>
-            </div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">agencyelevation.com</h3>
-                <!-- Add small description of your project  -->
-
-                <p class="work-text">Website for Agency Elevation.</p>
-                <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>Material UI</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="#" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
+			  <!-- WORK BOX START: 2 DONE -->
+			<!-- use the script type="text/plain tag to disable this work box. comment out otherwise -->
+			<!-- <script type="text/plain" id="disabled-work-box"> -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">LLM Evals</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    evaluating the performance of various vision large models using an image dataset and image classification task
+                  </p>
+				  <!-- Start remove resume button -->				  
+                  <ol class="work-technologies">
+                    <li>Python</li>
+                    <li>VLM: Paligemma3, Internvl3, Gemini pro 2.5</li>
+                    <li>Google Colab</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Explore this project</a
+                    >
 
                      <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="http://github.com/devsyedmohsin"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+                        src="assets/images/social-links/icons8-google-colab-96.svg"
+                        alt="Colab"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
                 </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/LLM-Evals.webp"
+                    alt="LLM evals"
+                  />
+                </picture>
               </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/agency-elevation.webp"
-                  alt="portfolio template"
-                />
-              </picture>
-            </div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">contribute.dev</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  Website for DevX A dedicated space for developer experience
-                </p>
-                <ol class="work-technologies">
-                  <li>Ruby</li>
-                  <li>SvelteKit</li>
-                  <li>Emotion</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="#" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
+			<!-- </script> -->
 
-                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
+			  <!-- WORK BOX START: 3 (DISABLED) -->
+			<!-- use the script type="text/plain tag to disable this work box. comment out otherwise -->
+			<!-- <script type="text/plain" id="disabled-work-box"> -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">AI research</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Report on Automating the Development of AI Agents.
+                  </p>
+                  <!-- Add technologies you used to build the project -->
+				  <!-- Start remove resume button
+                  <ol class="work-technologies">
+                    <li>React</li>
+                    <li>Gatsby</li>
+                    <li>SCSS</li>
+                    <li>MDX</li>
+                  </ol>
+				  End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://drive.google.com/file/d/1bxNFBsxQ9-joTFEF1Fem3EQNFBDrfE0b/view?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Read the report</a
+                    >
+
+                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
                 </div>
+
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Report on Automating AI Agents.webp"
+                    alt="Report on Automating the Development of AI Agents."
+                  />
+                </picture>
               </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/contribute-dev.webp"
-                  alt="contribute dev"
-                />
-              </picture>
+			<!-- </script> -->
+
+			  <!-- WORK BOX START: 4 (DISABLED) -->
+			<!-- use the script type="text/plain tag to disable this work box. comment out otherwise -->
+			<!-- <script type="text/plain" id="disabled-work-box"> -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">AI reports</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Reports on 3 AI papers.
+                  </p>
+                  <!-- Add technologies you used to build the project -->
+				  <!-- Start remove resume button  -->
+                  <ol class="work-technologies">
+                    <li>Bridging Autonomous Collaboration in Software Development via ChatDev</li>
+                    <li>Agent Hospital_ A Simulated Evolution of Medical Agents</li>
+                    <li>DrEureka's Novel Contributions to Robotics Sim-to-Real Transfer</li>
+                    <!-- <li>MDX</li> -->
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://mega.nz/file/kvMkiRZA#b5TlH9Vw3QUgFiBDYBUL0FvDxAilythH1GmIuOdM8QQ" target="_blank" rel="noopener" class="link"
+                      >Read the reports</a
+                    >
+
+                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					-->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Megaupload"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Reports on 3 AI papers.webp"
+                    alt="AI reports"
+                  />
+                </picture>
+              </div>
+			<!-- </script> -->
             </div>
+		    <!-- WORK TAB END: AI -->
+
+			<!-- WORK TAB START: Product Management (pm) -->
+            <div class="work-tab-content" id="pm">
+              <!-- WORK BOX START: PM 1 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Product Requirements</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Detailed product requirements for food business co
+                  </p>
+				  <!-- Start remove resume button				  
+                  <ol class="work-technologies">
+                    <li>Ruby</li>
+                    <li>SvelteKit</li>
+                    <li>Emotion</li>
+                  </ol>
+				  End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://drive.google.com/file/d/13PgikFmxH9wqlkxMtatTp_wmE5uGX6ad/view?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Read the PRD</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/product-requirements-foodco.webp"
+                    alt="product-requirements-foodco"
+                  />
+                </picture>
+              </div>
+
+              <!-- WORK BOX START: PM 2 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Go To Market</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Go to Market plan for Bank of Agrculture
+                  </p>
+				  <!-- Start remove resume button				  
+                  <ol class="work-technologies">
+                    <li>Ruby</li>
+                    <li>SvelteKit</li>
+                    <li>Emotion</li>
+                  </ol>
+				  End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://drive.google.com/file/d/1EAErd8NFmPZQ6UsSiXchWBEIxmcnbpnM/view?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Read the plan</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Go-to-market-BOA.webp"
+                    alt="Go-to-market-BOA"
+                  />
+                </picture>
+              </div>
+
+              <!-- WORK BOX START: PM 3 -->
+			<script type="text/plain" id="disabled-work-box">
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">LLM Evals</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    evaluating the performance of various vision large models using an image dataset and image classification task
+                  </p>
+				  <!-- Start remove resume button -->				  
+                  <ol class="work-technologies">
+                    <li>Ruby</li>
+                    <li>SvelteKit</li>
+                    <li>Emotion</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Explore this project</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+                        src="assets/images/social-links/github.svg"
+                        alt="Colab"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/contribute-dev.webp"
+                    alt="contribute dev"
+                  />
+                </picture>
+              </div>
+			</script>
+            </div>
+		    <!-- WORK TAB END: Product Management -->
+			
+			<!-- WORK TAB START: Indie Projects (indie) -->
+            <div class="work-tab-content" id="indie">
+              <!-- WORK BOX START: PM 1 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Autotrader MVP</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Telegram bot for forwarding and analysing trading signals
+                  </p>
+				  <!-- Start remove resume button -->				  
+                  <ol class="work-technologies">
+                    <li>Python</li>
+                    <li>Neon</li>
+                    <li>Redis</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute. REMEMBER TO CHANGE THIS DEMO NAME TO THE ACTUAL CURRENT TELEGRAM BOT USERNAME!!! VERY IMPORTANT!!! -->
+                    <a href="https://t.me/middlewarebottelegramca_bot" target="_blank" rel="noopener" class="link"
+                      >Open the bot</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+                        src="assets/images/social-links/Github.svg"
+                        alt="Github"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Autotrader-MVP.webp"
+                    alt="Autotrader-MVP"
+                  />
+                </picture>
+              </div>
+
+              <!-- WORK BOX START: Indie project 2 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">AI agent</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Automated LinkedIn article writer that turns RSS feeds into LinkedIn articles
+                  </p>
+				  <!-- Start remove resume button -->				  
+                  <ol class="work-technologies">
+                    <li>n8n</li>
+                    <li>LLM: Gemini 2.5 pro</li>
+                    <li>RSS feeds</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://mega.nz/file/E3Nl2CjL#AbIJ8T1JUjcBnLkW6DxOmdGQ9E3joaQcMT_e3ga1o6A" target="_blank" rel="noopener" class="link"
+                      >download the workflow</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/n8n-workflow.webp"
+                    alt="n8n-workflow"
+                  />
+                </picture>
+              </div>
+
+              <!-- WORK BOX START: Indie project 3 -->
+			<script type="text/plain" id="disabled-work-box">
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">LLM Evals</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    evaluating the performance of various vision large models using an image dataset and image classification task
+                  </p>
+				  <!-- Start remove resume button -->				  
+                  <ol class="work-technologies">
+                    <li>Ruby</li>
+                    <li>SvelteKit</li>
+                    <li>Emotion</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing" target="_blank" rel="noopener" class="link"
+                      >Explore this project</a
+                    >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                    <a
+                      href="https://colab.research.google.com/drive/1MBeAkeA6UxOjG3IApeMe2A6SjcSMkOa_?usp=sharing"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+                        src="assets/images/social-links/github.svg"
+                        alt="Colab"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/contribute-dev.webp"
+                    alt="contribute dev"
+                  />
+                </picture>
+              </div>
+			</script>
+            </div>
+		    <!-- WORK TAB END: Indie Projects -->
+
+			<!-- WORK TAB START: Other projects (other) -->
+            <div class="work-tab-content" id="other">
+              <!-- WORK BOX START: Other 1 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Lagos City Luxury Terrace Flats</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Real estate financial model and investment proposal.
+                  </p>
+                  <!-- Add technologies you used to build the project -->
+				  <!-- Start remove resume button
+                  <ol class="work-technologies">
+                    <li>React</li>
+                    <li>Gatsby</li>
+                    <li>SCSS</li>
+                    <li>MDX</li>
+                  </ol>
+				  End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://mega.nz/file/R3VhmKDI#5b7S3cPvd6ndJQmLoRShhJgzoLbVjStUWtv_HmS6r2Q" target="_blank" rel="noopener" class="link"
+                      >Read the Proposal</a
+                    >
+
+                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Lagos-Luxury-Flats.webp"
+                    alt="Lagos-Luxury-Flats"
+                  />
+                </picture>
+              </div>
+			  
+              <!-- WORK BOX START: Other 2 -->
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Financial model</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Financial model for a VSP.
+                  </p>
+                  <!-- Add technologies you used to build the project -->
+				  <!-- Start remove resume button
+                  <ol class="work-technologies">
+                    <li>React</li>
+                    <li>Gatsby</li>
+                    <li>SCSS</li>
+                    <li>MDX</li>
+                  </ol>
+				  End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://docs.google.com/spreadsheets/d/1mf6PJ8AD7mOtHOY4ktJmXMbkA0Y5sGSI/edit?usp=sharing&ouid=114849022565414726085&rtpof=true&sd=true" target="_blank" rel="noopener" class="link"
+                      >Explore this Model</a
+                    >
+
+                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+					 -->
+                      <img
+                        src="assets/images/social-links/Google_Drive_icon_(2020).svg"
+                        alt="Google Drive"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/Financial-Plan-VSP.webp"
+                    alt="Financial-Plan-VSP"
+                  />
+                </picture>
+              </div>
+
+              <!-- WORK BOX START: Other 3 -->
+			<script type="text/plain" id="disabled-work-box">
+              <div class="work-box">
+                <div class="work-textbox">
+                  <!-- Add your project title here -->
+                  <h3 class="h3">Autotrader MVP</h3>
+                  <!-- Add small description of your project  -->
+                  <p class="work-text">
+                    Telegram bot for forwarding and analysing trading signals.
+                  </p>
+                  <!-- Add technologies you used to build the project -->
+				  <!-- Start remove resume button -->
+                  <ol class="work-technologies">
+                    <li>React</li>
+                    <li>Gatsby</li>
+                    <li>SCSS</li>
+                    <li>MDX</li>
+                  </ol>
+				  <!-- End remove resume button -->
+                  <div class="work-links">
+                    <!-- Add url of project in href attribute -->
+                    <a href="https://https://t.me/middlewarebottelegramca_bot" target="_blank" rel="noopener" class="link"
+                      >Explore this project(should be updated link to the telegram bot)</a
+                    >
+
+                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                    <a
+                      href="https://github.com/njemanzedavid/telegram-bot-production2"
+                      target="_blank"
+                      rel="noopener"
+                      title="Source code"
+                    >
+                      <img
+                        src="assets/images/social-links/github.svg"
+                        alt="GitHub"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Update img src and alt attribute  -->
+                <picture class="work-img">
+                  <img
+                    loading="lazy"
+                    src="assets/images/work/portfolio-template.webp"
+                    alt="agency elevation(take some picture of the bot, or maybe gif of the bot in use)"
+                  />
+                </picture>
+              </div>			  
+			</script>			  
+            </div>
+		    <!-- WORK TAB END: Other Projects -->
           </div>
+		  <!-- ALL WORK BOXES END -->
         </div>
+		<!-- WHOLE WORK CONTAINER END -->
       </section>
 
-      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
-
+      <!-- I write blog posts on substack at https://substack.com/oraekene. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+	  <!-- Start remove article section -->
+	<script type="text/plain" id="disabled-work-box">
       <section class="article">
         <div class="container">
           <h2 class="h2" id="blog">My Articles</h2>
@@ -471,30 +1019,109 @@
           </div>
         </div>
       </section>
-
-      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
-
-      <section class="skills">
+	</script>
+	  	  
+	 <!-- Update roles-because many of my skills are non technical/non programmming, use this section to list those non technical skills and job roles i can play -->
+	 <!-- Start remove roles section -->
+      <section class="roles" id="roles">
         <div class="container">
-          <h2 class="h2" id="skills">My Toolkit</h2>
-          <div class="skills-imgs">
-                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
-                <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte">
-                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
-                 <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
-                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
-                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
-                 <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL">
-                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
-                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
-            </figure>
+          <h2 class="h2">My Roles</h2>
+          <div class="roles-list">
+            <div class="role-item">
+              <h3 class="h4">Product Manager</h3>
+              <ul>
+				<li>Strategic thinking</li>
+				<li>User research</li>
+				<li>Roadmap planning</li>
+			  </ul>
+            </div>
+            <div class="role-item">
+              <h3 class="h4">ML Engineer</h3>
+              <ul>
+				<li>Model training</li>
+				<li>Performance evaluation</li>
+				<li>System integration (inference)</li>
+			  </ul>
+            </div>
+            <div class="role-item">
+              <h3 class="h4">Financial Analyst</h3>
+              <ul>
+				<li>Credit analysis</li>
+				<li>Business modeling</li>
+				<li>Risk assessment</li>
+			  </ul>
+            </div>
+            <div class="role-item">
+              <h3 class="h4">AI Automation Engineer</h3>
+              <ul>
+				<li>Workflow automation</li>
+				<li>API integration</li>
+				<li>Bot development</li>
+			  </ul>
+            </div>
+            <div class="role-item">
+              <h3 class="h4">Applied AI Researcher</h3>
+              <ul>
+				<li>Literature review</li>
+				<li>Hypothesis testing</li>
+				<li>Report writing</li>
+			  </ul>
+            </div>
+            <div class="role-item">
+              <h3 class="h4">Product Engineer</h3>
+              <ul>
+				<li>Web development</li>
+				<li>Database integration</li>
+				<li>System automation</li>
+				<li>Application deployment</li>
+			  </ul>
+            </div>
           </div>
         </div>
       </section>
+      <!-- End remove roles section -->
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+	<!-- use the script type="text/plain tag to disable this client section. delete otherwise -->
+	<script type="text/plain" id="disabled-section">
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-grid">
+            <div class="skills-category">
+              <h3 class="h5">Technical Skills</h3>
+              <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte">
+                <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+                <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
+                <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
+                <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL">
+                <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+              </div>
+            </div>
+			<!-- START: Commented out "Other Skills" section -->
+			<div class="toolkit-section">
+			  <h3 class="h5">Other Skills</h3>
+			  <ul class="other-skills-list">
+				<li class="skill-text" style="font-size: 22px;">Research</li>
+				<li class="skill-text" style="font-size: 26px;">Product Management</li>
+				<li class="skill-text" style="font-size: 20px;">AI Engineering</li>
+				<li class="skill-text" style="font-size: 28px;">Financial Analysis</li>
+				<li class="skill-text" style="font-size: 24px;">AI Agent Building</li>
+			  </ul>
+			</div>
+	        <!-- END: Commented out "Other Skills" section -->
+          </div>
+        </div>
+      </section>
+	</script>       
 
       <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
-
+	<script type="text/plain" id="disabled-work-box">
       <section>
         <h2 class="h2">Testimonials</h2>
         <div class="container">
@@ -611,6 +1238,8 @@
           </ol>
         </div>
       </section>
+	</script>
+	  <!-- End remove testimonials section -->
 
       <section class="contact">
         <div class="container">
@@ -623,22 +1252,19 @@
                 Available for hire
               </strong>
               <p class="contact-text">
-                As a software engineer, I construct web interfaces and design
-                systems with a special love for accessibility and the
-                performance. I tend to code things from scratch and enjoy
-                bringing ideas to life.
+				As a product strategist and technical builder, I develop fintech solutions and AI-powered tools with a focus on user-centered design and strategic thinking. I tend to approach problems analytically and enjoy transforming complex ideas into viable products and systems.
               </p>
               <p class="contact-text">
-                I'm also an open-source developer, and in my spare time, I do
-                digital art with my iPad Pro.
+				I'm also an AI researcher and financial analyst, and in my spare time, I explore blockchain data analytics and write technical reports on emerging technologies.
               </p>
-              <!-- Replace src with your signatures and name -->
+              <!-- Replace src with your signatures and name
               <img
                 src="assets/images/signatures.png"
                 alt="Syed Mohsin"
                 class="signatures"
                 loading="lazy"
               />
+			   -->
             </div>
             <form action="#" class="contact-form" netlify>
               <div class="form-field">
@@ -660,10 +1286,11 @@
                 <textarea name="message" id="message" required></textarea>
               </div>
               <button type="submit" class="btn btn-cta">Send</button>
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3nKMmKpv98mcodV3R6nECekG3n928U0-qWlxfORcDOoq-ZYHNAks3LhLoq4UsQKJJSc_s0jKQe" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
             </form>
           </div>
         </div>
-      </section>
+      </section> 
     </main>
 
     <footer class="footer">
@@ -673,7 +1300,7 @@
           <nav>
             <ol class="footer-links">
               <li class="footer-link">
-                <a title="GitHub" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                <a title="GitHub" href="https://github.com/njemanzedavid" target="_blank" rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/github.svg"
@@ -681,15 +1308,15 @@
                 /></a>
               </li>
               <li class="footer-link">
-                <a title="Codepen" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                <a title="Dune" href="https://dune.com/oraekene" target="_blank" rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/codepen.svg"
-                    alt="Codepen"
+                    alt="Dune"
                 /></a>
               </li>
               <li class="footer-link">
-                <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener"
+                <a title="Linkedin" href="https://www.linkedin.com/in/oraelosikenny/" target="_blank" rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/linkedin.svg"
@@ -697,7 +1324,7 @@
                 /></a>
               </li>
               <li class="footer-link">
-                <a title="Twitter" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                <a title="Twitter" href="https://twitter.com/oraekene" target="_blank" rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/twitter.svg"
@@ -707,7 +1334,7 @@
             </ol>
           </nav>
           <p class="footer-text">
-            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/devsyedmohsin">Syed Mohsin.</a>
+            &copy; <span>2025</span> - Portfolio of <a target="_blank" rel="noopener" href="https://github.com/njemanzedavid">Kenechukwu Oraelosi.</a>
           </p>
           <label class="theme-switch" for="theme-switch">
             <span>Dark Theme</span>

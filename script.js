@@ -5,6 +5,8 @@ const workEls = document.querySelectorAll(".work-box");
 const workImgs = document.querySelectorAll(".work-img");
 const mainEl = document.querySelector("main");
 const yearEl = document.querySelector(".footer-text span");
+const workTabBtns = document.querySelectorAll(".work-tab-btn");
+const workTabContents = document.querySelectorAll(".work-tab-content");
 
 const toggleNav = () => {
   nav.classList.toggle("hidden");
@@ -112,3 +114,105 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 });
 
 yearEl.textContent = new Date().getFullYear();
+
+// Work tabs functionality
+// After: initWorkTabs()
+// Replaces the old inline work-tabs click-handler block
+function initWorkTabsFixed() {
+  const tabBtns = Array.from(document.querySelectorAll('.work-tab-btn'));
+  const tabContents = Array.from(document.querySelectorAll('.work-tab-content'));
+  
+  if (!tabBtns.length || !tabContents.length) return;
+
+  // Set default active tab
+  tabBtns.forEach(b => b.classList.remove('active'));
+  tabContents.forEach(c => c.classList.remove('active'));
+  
+  const aiBtn = document.querySelector('.work-tab-btn[data-tab="ai"]');
+  const aiContent = document.getElementById('ai');
+  
+  if (aiBtn) aiBtn.classList.add('active');
+  if (aiContent) aiContent.classList.add('active');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const target = btn.getAttribute('data-tab');
+      if (!target) return;
+
+      // Reset ALL tabs (both text AND images)
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => {
+        c.classList.remove('active');
+        
+        // Reset text animations
+        const workElements = c.querySelectorAll('.work-textbox h3, .work-text, .work-technologies, .work-links');
+        workElements.forEach(el => {
+          el.style.animationPlayState = "paused";
+          el.style.transform = "translateY(45px)";
+          el.style.opacity = "0";
+        });
+        
+        // FIX: Reset image animations too
+        const workImages = c.querySelectorAll('.work-img');
+        workImages.forEach(img => {
+          img.classList.add('transform'); // This resets the image animation
+        });
+      });
+
+      // Activate selected tab
+      btn.classList.add('active');
+      const content = document.getElementById(target);
+      if (content) {
+        content.classList.add('active');
+        
+        // Trigger text animations immediately
+        const workElements = content.querySelectorAll('.work-textbox h3, .work-text, .work-technologies, .work-links');
+        workElements.forEach((el, index) => {
+          setTimeout(() => {
+            el.style.animationPlayState = "running";
+            el.style.transform = "none";
+            el.style.opacity = "1";
+          }, index * 100); // Stagger animations
+        });
+        
+        // Trigger image animations immediately
+        const workImages = content.querySelectorAll('.work-img');
+        workImages.forEach(img => {
+          setTimeout(() => {
+            img.classList.remove('transform'); // This triggers the image animation
+          }, 200); // Small delay after text starts
+        });
+      }
+    });
+  });
+}
+
+// Ensure it runs once on load
+document.addEventListener('DOMContentLoaded', initWorkTabsFixed);
+
+// Add to your JavaScript
+const roleItems = document.querySelectorAll('.role-item');
+
+// Set initial state
+roleItems.forEach(item => {
+  item.style.transform = 'translateY(45px)';
+  item.style.opacity = '0';
+  item.style.transition = 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+});
+
+// Create observer for roles
+const roleObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.opacity = '1';
+      }, index * 150); // Staggered appearance
+    }
+  });
+}, { threshold: 0.3 });
+
+// Observe all role items
+roleItems.forEach(item => roleObserver.observe(item));
+
