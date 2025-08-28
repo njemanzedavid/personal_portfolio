@@ -1576,73 +1576,25 @@ img, picture { max-width: 100%; height: auto; object-fit: cover; }
 
 /* Make contact form buttons responsive and avoid spillover.
    Layout: side-by-side when space allows, stack on very small screens. */
-/* ======= CONTACT FORM: keep desktop unchanged, only change mobile ======= */
+/* ========================
+   Contact form button fix
+   ======================== */
 
-/* Reset any earlier global changes so desktop returns to original layout */
-.contact-form {
-  display: block !important;      /* restore block layout for desktop */
-  gap: initial !important;
-  align-items: initial !important;
-  justify-content: initial !important;
-  flex-wrap: nowrap !important;
-  padding-inline: initial !important;
-}
-
-/* Keep individual controls full-width by default (desktop/large screens) */
-.contact-form .btn,
-.contact-form a.btn {
-  display: inline-block;
-  min-inline-size: unset;
-  max-inline-size: unset;
-  flex: unset;
-  padding: 0.6rem 0.9rem;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-/* ===== Mobile-only rules: apply flex + responsive buttons under 480px ===== */
-@media (max-width: 480px) {
-  .contact-form {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    align-items: center;
-    justify-content: flex-start;
-    padding-inline: 0.5rem;
-  }
-
+/* On very small screens, stack buttons neatly full-width */
+@media (max-width: 420px) {
   .contact-form .btn,
   .contact-form a.btn {
-    flex: 1 1 auto;                       /* allow shrink/grow */
-    min-inline-size: 120px;               /* comfortable tap target */
-    max-inline-size: calc(50% - 0.3rem);  /* try to fit two side-by-side */
-    padding: 0.55rem 0.8rem;
-    font-size: 0.95rem;
-    text-align: center;
-    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 14px 0;   /* smaller padding so text still fits */
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
   }
 
-  /* Order: primary CTA first, secondary after (adjust if your HTML order differs) */
-  .contact-form .btn-cta { order: 1; }
-  .contact-form a.btn { order: 2; }
-
-  /* On very narrow phones, stack full-width */
-  @media (max-width: 380px) {
-    .contact-form .btn,
-    .contact-form a.btn {
-      max-inline-size: 100%;
-      flex-basis: 100%;
-      display: inline-block;
-    }
+  /* keep spacing consistent */
+  .contact-form .btn:last-child {
+    margin-bottom: 0;
   }
-}
-
-/* Small defensive rule so textarea and inputs behave predictably */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* =========================
