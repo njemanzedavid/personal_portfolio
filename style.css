@@ -1435,3 +1435,137 @@ input:checked {
   outline: none;
   box-shadow: none;
 }
+
+/* ========== MOBILE FIXES (paste near end of style.css) ========== */
+
+/* Use modern viewport height on supporting browsers, and fall back to 100vh.
+   Avoid oversizing the header on small screens and remove fixed background. */
+.header {
+  /* fallback for older browsers */
+  min-block-size: 100vh;
+  /* modern unit that avoids browser chrome issues where supported */
+  min-block-size: 100svh;
+  background-attachment: scroll; /* prevent mobile painting/positioning issues */ 
+  padding-block-end: calc(var(--radius) / 2);
+}
+
+/* Reduce main upward shift on small viewports so content doesn't overlap awkwardly */
+@media (max-width: 700px) {
+  main {
+    transform: translateY(calc(-1 * var(--radius) / 2));
+  }
+}
+
+/* Reduce huge vertical spacing used between work boxes on phones */
+@media (max-width: 700px) {
+  :root {
+    --gutter-huge: 2.5rem; /* much smaller gap on phones */
+    --gutter-x-large: 2rem;
+    --gutter-large: 1.2rem;
+  }
+
+  /* Ensure work items stack cleanly with reasonable gaps */
+  .work-box:not(:last-child) {
+    margin-block-end: 1.6rem !important;
+  }
+
+  .work-box {
+    gap: 0.6rem;
+  }
+
+  .work-img,
+  .work-textbox {
+    flex-basis: 100%;
+    max-inline-size: 100%;
+  }
+
+  .work-img { margin-block-end: 1rem; }
+}
+
+/* Ensure header textbox centers nicely and fits on small screens */
+@media (max-width: 480px) {
+  .header-textbox {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    position: relative; /* let textbox flow within header on very small screens */
+    top: auto;
+    transform: none;
+    text-align: center;
+    padding-inline: 0.5rem;
+    margin-block-start: 1.4rem;
+  }
+
+  .header-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-text {
+    max-inline-size: 100%;
+    margin-block-end: 1rem;
+  }
+}
+
+/* Make menu button and nav centering better on mobiles */
+@media (max-width: 700px) {
+  .menu-btn {
+    inline-size: 100px;
+    padding-inline: 0.6rem;
+    margin-inline-start: auto;
+  }
+
+  .nav-items {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding-inline: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item a { font-size: 1.6rem; line-height: 1.25; }
+}
+
+/* Prevent overly tall logo / spacing causing pushes on tiny screens */
+@media (max-width: 420px) {
+  :root {
+    --radius: 36px;
+  }
+  .logo { max-inline-size: 75px; max-block-size: 48px; }
+}
+
+/* Prevent large focus/tap highlight issues */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Optional: force images to never overflow (defensive) */
+img, picture { max-width: 100%; height: auto; object-fit: cover; }
+
+/* End mobile fixes */
+
+/* MOBILE: make tabs horizontally scrollable so no tab is clipped */
+@media (max-width: 760px) {
+  .work-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth native scrolling on iOS */
+    padding-inline: 0.75rem;           /* give room for the first/last tabs */
+    scrollbar-width: thin;             /* firefox */
+    justify-content: flex-start;       /* don't center, show beginning */
+  }
+
+  /* keep each tab sized to its content (no shrinking to zero) */
+  .work-tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;               /* prevent wrapping inside button */
+    font-size: 1.05rem;                /* slightly smaller on phones */
+    padding: 0.45rem 0.65rem;
+  }
+
+  /* optional: hide native scrollbar but keep scrollability (webkit) */
+  .work-tabs::-webkit-scrollbar { height: 8px; }
+  .work-tabs::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(0,0,0,0.12); }
+}

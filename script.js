@@ -184,6 +184,11 @@ function initWorkTabsFixed() {
           }, 200); // Small delay after text starts
         });
       }
+	  // ensure selected tab is visible on narrow screens
+	  if (btn.scrollIntoView) {
+	    // center the tab when possible
+	    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+	  }
     });
   });
 }
