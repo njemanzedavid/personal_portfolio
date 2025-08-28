@@ -1266,28 +1266,24 @@
               />
 			   -->
             </div>
-            <form action="#" class="contact-form" netlify>
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  inputmode="email"
-                />
-              </div>
-              <div class="form-field">
-                <label for="message">How can I help you?</label>
-                <textarea name="message" id="message" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-cta">Send</button>
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3nKMmKpv98mcodV3R6nECekG3n928U0-qWlxfORcDOoq-ZYHNAks3LhLoq4UsQKJJSc_s0jKQe" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
-            </form>
+			<!-- index.html — minimal change -->
+			<form name="contact" method="POST" data-netlify="true" class="contact-form">
+			  <input type="hidden" name="form-name" value="contact" />
+			  <div class="form-field">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" required />
+			  </div>
+			  <div class="form-field">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" required inputmode="email" />
+			  </div>
+			  <div class="form-field">
+				<label for="message">How can I help you?</label>
+				<textarea name="message" id="message" required></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-cta">Send</button>
+			  <a href="..." class="btn btn-secondary">Book a Call</a>
+			</form>
           </div>
         </div>
       </section> 

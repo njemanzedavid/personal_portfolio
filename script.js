@@ -216,3 +216,46 @@ const roleObserver = new IntersectionObserver((entries) => {
 // Observe all role items
 roleItems.forEach(item => roleObserver.observe(item));
 
+// NETLIFY AJAX form submit (place at end of script.js)
+(() => {
+  const contactForm = document.querySelector('form[name="contact"]');
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(contactForm);
+
+    try {
+      // POST to Netlify (the same origin). Netlify will capture the submission if data-netlify="true"
+      const resp = await fetch('/', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (resp.ok) {
+        // success UI
+        submitBtn.textContent = 'Sent ✓';
+        contactForm.reset();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (err) {
+      console.error(err);
+      submitBtn.textContent = 'Send';
+      alert('There was an error sending your message. Try again or email oraelosikenny@gmail.com');
+    } finally {
+      submitBtn.disabled = false;
+      // restore text after 2s if it was 'Sent ✓'
+      setTimeout(() => {
+        submitBtn.textContent = 'Send';
+      }, 2000);
+    }
+  });
+})();
+
+
