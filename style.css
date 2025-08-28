@@ -1569,3 +1569,82 @@ img, picture { max-width: 100%; height: auto; object-fit: cover; }
   .work-tabs::-webkit-scrollbar { height: 8px; }
   .work-tabs::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(0,0,0,0.12); }
 }
+
+/* =========================
+   Mobile: contact form buttons
+   ========================= */
+
+/* Make contact form buttons responsive and avoid spillover.
+   Layout: side-by-side when space allows, stack on very small screens. */
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Apply to both <button> and <a class="btn"> variants you use */
+.contact-form .btn,
+.contact-form a.btn {
+  flex: 1 1 auto;                 /* allow shrinking/growing */
+  min-inline-size: 120px;         /* maintain comfortable tap target */
+  max-inline-size: calc(50% - 0.3rem); /* try to fit two buttons side-by-side */
+  padding: 0.55rem 0.8rem;
+  font-size: 0.95rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Ensure primary CTA has visual priority but follows same sizing rules */
+.contact-form .btn-cta {
+  flex-basis: auto;
+}
+
+/* When space is very narrow, stack buttons full-width for readability */
+@media (max-width: 420px) {
+  .contact-form .btn,
+  .contact-form a.btn {
+    max-inline-size: 100%;
+    flex-basis: 100%;
+    display: inline-block;
+  }
+  /* Keep a natural order: CTA first, secondary below (adjust if your HTML order differs) */
+  .contact-form .btn-cta { order: 1; }
+  .contact-form a.btn { order: 2; }
+}
+
+/* Slight visual tweak: reduce margins so the form fits better on tiny screens */
+@media (max-width: 480px) {
+  .contact-form { gap: 0.45rem; padding-inline: 0.5rem; }
+  .contact-form label { font-size: 0.95rem; }
+  .contact-form input, .contact-form textarea { font-size: 0.95rem; }
+}
+
+/* =========================
+   Mobile: reduce header gap before body
+   ========================= */
+
+/* Gentle reduction of header height and the main upward shift for smaller viewports.
+   Keeps desktop behaviour intact while preventing too-large gaps on phones. */
+@media (max-width: 900px) {
+  .header {
+    /* prefer svh where supported but a smoothed reduction for phones */
+    min-block-size: calc(100svh - 2.25rem);
+    padding-block-end: calc(var(--radius) / 2.6);
+    background-attachment: scroll; /* already recommended earlier — safer on mobile */
+  }
+
+  /* Reduce the upward translate so stacked content doesn't visually overlap */
+  main {
+    transform: translateY(calc(-1 * var(--radius) / 2.6));
+  }
+}
+
+/* Extra shrink for very small phones */
+@media (max-width: 420px) {
+  :root { --radius: 36px; } /* slightly smaller radius helps the header/body spacing */
+  .header { min-block-size: calc(100svh - 3.1rem); padding-block-end: calc(var(--radius) / 3.2); }
+  main { transform: translateY(calc(-1 * var(--radius) / 3.2)); }
+  .header-textbox { padding-inline: 0.6rem; left: auto; right: auto; width: auto; transform: none; position: relative; text-align: center; }
+}
